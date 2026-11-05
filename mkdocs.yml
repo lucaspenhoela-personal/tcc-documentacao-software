@@ -1,0 +1,39 @@
+site_name: Documentação do Projeto
+site_description: Documentação técnica mantida como código
+repo_url: https://github.com/ORGANIZACAO/REPOSITORIO
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.action.edit
+    - search.suggest
+
+nav:
+  - Início: index.md
+  - Guias:
+      - Fluxo de revisão por pares: guias/revisao-por-pares.md
+      - Definition of Done documental: guias/definition-of-done.md
+      - Convenções de escrita: guias/convencoes.md
+  - Templates:
+      - README de serviço: templates/README-servico.md
+      - ADR: templates/ADR-template.md
+      - Runbook: templates/runbook-template.md
+      - Documentação de API: templates/api-template.md
+      - Onboarding: templates/onboarding-template.md
+  - Decisões (ADRs): adr/
+  - Runbooks: runbooks/
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.superfences
+
+plugins:
+  - search:
+      lang: pt

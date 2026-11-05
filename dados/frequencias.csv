@@ -1,0 +1,6 @@
+questao,afirmacao_resumida,n_1,n_2,n_3,n_4,n_5
+Q1,Priorização de entregas funcionais em detrimento da documentação,1,0,3,2,5
+Q2,Documentação como critério rigoroso e auditado da Definition of Done,1,2,0,3,5
+Q3,Ausência de documentação gera retrabalho e dívida técnica,0,1,0,2,8
+Q4,Documentação como ativo estratégico para onboarding,0,0,1,1,9
+Q5,IA eficaz e confiável na documentação,0,0,2,4,5

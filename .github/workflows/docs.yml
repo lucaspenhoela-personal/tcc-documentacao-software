@@ -1,0 +1,60 @@
+name: Documentação (Docs-as-Code)
+
+on:
+  pull_request:
+    paths: ["docs/**", "mkdocs.yml", ".github/workflows/docs.yml"]
+  push:
+    branches: [main]
+
+jobs:
+  validar:
+    name: Validar Markdown e links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint de Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: "docs/**/*.md"
+
+      - name: Verificar links quebrados
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --no-progress --exclude-mail "docs/**/*.md"
+          fail: true
+
+      - name: Exigir cabeçalho de metadados
+        run: |
+          falhou=0
+          for f in $(find docs -name '*.md' ! -name 'index.md'); do
+            if ! head -n 1 "$f" | grep -q '^---$'; then
+              echo "::error file=$f::sem cabeçalho de metadados (titulo/responsavel/ultima_revisao/status)"
+              falhou=1
+            fi
+          done
+          exit $falhou
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build do site
+        run: |
+          pip install mkdocs-material
+          mkdocs build --strict
+
+  publicar:
+    name: Publicar no GitHub Pages
+    needs: validar
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force

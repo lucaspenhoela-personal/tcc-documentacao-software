@@ -1,0 +1,5 @@
+site/
+saida/
+__pycache__/
+*.pyc
+.venv/
