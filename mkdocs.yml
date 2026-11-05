@@ -1,6 +1,6 @@
 site_name: Documentação do Projeto
 site_description: Documentação técnica mantida como código
-repo_url: https://github.com/ORGANIZACAO/REPOSITORIO
+repo_url: https://github.com/lucaspenhoela-personal/tcc-documentacao-software
 edit_uri: edit/main/docs/
 
 theme:
