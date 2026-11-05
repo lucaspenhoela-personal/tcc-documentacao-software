@@ -5,13 +5,13 @@ ultima_revisao: AAAA-MM-DD
 status: vigente
 ---
 
-# Runbook — <Nome do serviço>
+# Runbook — [Nome do serviço]
 
 ## Contexto rápido
 
-- O que o serviço faz: <uma frase>
-- Impacto se cair: <quem é afetado e como>
-- Dependências críticas: <lista>
+- O que o serviço faz: [uma frase]
+- Impacto se cair: [quem é afetado e como]
+- Dependências críticas: [lista]
 
 ## Verificação de saúde
 
@@ -19,7 +19,7 @@ status: vigente
 curl -s https://<host>/health
 ```
 
-Dashboard: <link> — Alertas: <link>
+Dashboard: [link] — Alertas: [link]
 
 ## Procedimentos
 
@@ -47,8 +47,8 @@ Dashboard: <link> — Alertas: <link>
 
 ## Acionamento
 
-- Plantão: <como contatar>
-- Escalonamento: <próximo nível>
+- Plantão: [como contatar]
+- Escalonamento: [próximo nível]
 
 ## Histórico de incidentes
 

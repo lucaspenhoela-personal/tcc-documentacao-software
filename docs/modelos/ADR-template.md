@@ -5,7 +5,7 @@ ultima_revisao: AAAA-MM-DD
 status: proposto | aceito | substituído por ADR-NNNN | obsoleto
 ---
 
-# ADR-NNNN — <Título curto da decisão>
+# ADR-NNNN — [Título curto da decisão]
 
 ## Contexto
 
@@ -33,5 +33,5 @@ O que foi decidido, em uma frase direta. "Vamos adotar X para Y."
 
 ## Referências
 
-- Issue / PR: <link>
-- Discussão: <link>
+- Issue / PR: [link]
+- Discussão: [link]
