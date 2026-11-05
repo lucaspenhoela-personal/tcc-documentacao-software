@@ -21,7 +21,7 @@ jobs:
       - name: Verificar links quebrados
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --no-progress --exclude-mail "docs/**/*.md"
+          args: --no-progress --offline "docs/**/*.md"
           fail: true
 
       - name: Exigir cabeçalho de metadados
@@ -41,7 +41,7 @@ jobs:
 
       - name: Build do site
         run: |
-          pip install mkdocs-material
+          pip install "mkdocs==1.6.1" "mkdocs-material==9.7.7"
           mkdocs build --strict
 
   publicar:
@@ -56,5 +56,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install mkdocs-material
+      - run: pip install "mkdocs==1.6.1" "mkdocs-material==9.7.7"
       - run: mkdocs gh-deploy --force

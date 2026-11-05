@@ -31,21 +31,21 @@ sequenceDiagram
 
 ### `POST /recurso`
 
-**Descrição:**
+Descrição:
 
-**Requisição**
+#### Requisição
 
 ```json
 { "campo": "valor" }
 ```
 
-**Resposta `201`**
+#### Resposta `201`
 
 ```json
 { "id": "..." }
 ```
 
-**Erros**
+#### Erros
 
 | Código | Quando |
 |---|---|

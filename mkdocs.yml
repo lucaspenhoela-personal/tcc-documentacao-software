@@ -18,14 +18,15 @@ nav:
       - Fluxo de revisão por pares: guias/revisao-por-pares.md
       - Definition of Done documental: guias/definition-of-done.md
       - Convenções de escrita: guias/convencoes.md
-  - Templates:
-      - README de serviço: templates/README-servico.md
-      - ADR: templates/ADR-template.md
-      - Runbook: templates/runbook-template.md
-      - Documentação de API: templates/api-template.md
-      - Onboarding: templates/onboarding-template.md
-  - Decisões (ADRs): adr/
-  - Runbooks: runbooks/
+  - Modelos:
+      - README de serviço: modelos/README-servico.md
+      - ADR: modelos/ADR-template.md
+      - Runbook: modelos/runbook-template.md
+      - Documentação de API: modelos/api-template.md
+      - Onboarding: modelos/onboarding-template.md
+  - Decisões (ADRs):
+      - ADR-0001 Adotar Docs-as-Code: adr/0001-adotar-docs-as-code.md
+  - Runbooks: runbooks/README.md
 
 markdown_extensions:
   - admonition

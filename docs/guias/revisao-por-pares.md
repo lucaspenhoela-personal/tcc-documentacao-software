@@ -9,7 +9,7 @@ status: vigente
 
 A documentação segue o mesmo ciclo de vida do código:
 
-```
+```text
 branch → alteração em docs/ → pull request → CI valida → revisão por par → merge → publicação
 ```
 

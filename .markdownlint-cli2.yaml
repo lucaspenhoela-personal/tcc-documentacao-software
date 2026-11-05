@@ -3,3 +3,4 @@ config:
   MD013: false      # comprimento de linha
   MD033: false      # HTML inline (usado em tabelas)
   MD041: false      # primeira linha pode ser frontmatter
+  MD060: false      # alinhamento visual de tabelas (modelos têm células vazias)

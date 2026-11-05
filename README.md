@@ -9,16 +9,16 @@ Orientador: Prof. Me. Gilberto Alves Pereira.
 
 | Pasta | Conteúdo |
 |---|---|
-| `docs/templates/` | Modelos de documentação técnica no padrão *Docs-as-Code* (README de serviço, ADR, runbook, documentação de API, guia de onboarding) |
+| `docs/modelos/` | Modelos de documentação técnica no padrão *Docs-as-Code* (README de serviço, ADR, runbook, documentação de API, guia de onboarding) |
 | `docs/guias/` | Diretrizes de adoção: fluxo de revisão por pares, *Definition of Done* documental, convenções de escrita |
 | `.github/workflows/` | *Pipeline* de integração contínua que valida e publica a documentação a cada *pull request* |
 | `dados/` | Instrumento de coleta (questionário), distribuição das respostas por questão e perfil dos respondentes |
 | `scripts/` | *Script* de análise estatística que reproduz as tabelas e gráficos da Seção 4 do trabalho |
 | `mkdocs.yml` | Configuração do site de documentação (MkDocs + Material) |
 
-## Como usar os templates em um projeto
+## Como usar os modelos em um projeto
 
-1. Copie a pasta `docs/` e o arquivo `mkdocs.yml` para a raiz do repositório do seu projeto.
+1. Copie a pasta `docs/`, o arquivo `mkdocs.yml` e o `.markdownlint-cli2.yaml` para a raiz do repositório do seu projeto.
 2. Copie `.github/workflows/docs.yml` para habilitar a validação automática em cada *pull request*.
 3. Adote o `PULL_REQUEST_TEMPLATE` para que toda alteração de código declare o impacto na documentação.
 4. Publique com `mkdocs gh-deploy` ou deixe o *workflow* fazer isso ao mesclar na `main`.

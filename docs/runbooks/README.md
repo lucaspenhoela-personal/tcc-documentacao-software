@@ -7,4 +7,4 @@ status: vigente
 
 # Runbooks
 
-Um arquivo por serviço, criado a partir de [`templates/runbook-template.md`](../templates/runbook-template.md).
+Um arquivo por serviço, criado a partir de [`modelos/runbook-template.md`](../modelos/runbook-template.md).
